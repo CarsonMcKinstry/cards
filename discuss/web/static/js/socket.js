@@ -21,6 +21,7 @@ const createSocket = (topicId) => {
   document.querySelector("button").addEventListener('click', function() {
     const content = document.querySelector('textarea').value;
     channel.push('comment:add', {content: content});
+    document.querySelector('textarea').value = "";
   });
 }
 
